@@ -26,21 +26,33 @@ extension SKNode {
 }
 
 class GameViewController: UIViewController {
+    
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    
+    var gameScene: GameScene!
 
+    @IBOutlet weak var gameOverLabel: UILabel!
+    @IBAction func sliderChanged(sender: UISlider) {
+        gameScene.movedSlider(sender.value)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
             // Configure the view.
+            
+            
+            scene.myScene = self
             let skView = self.view as! SKView
             skView.showsFPS = true
-            skView.showsNodeCount = true
-            
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
             
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .AspectFill
+            
+            gameScene = scene
             
             skView.presentScene(scene)
         }
@@ -65,5 +77,9 @@ class GameViewController: UIViewController {
 
     override func prefersStatusBarHidden() -> Bool {
         return true
+    }
+    
+    func unwind(){
+        performSegueWithIdentifier("unwindToMenu", sender: self)
     }
 }

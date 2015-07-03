@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1B40001B45BC48004AEB32 /* projectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1B3FFF1B45BC48004AEB32 /* projectile.png */; };
 		3F6CEFAE1B417BB400FC1C2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6CEFAD1B417BB400FC1C2B /* AppDelegate.swift */; };
 		3F6CEFB01B417BB400FC1C2B /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3F6CEFAF1B417BB400FC1C2B /* GameScene.sks */; };
 		3F6CEFB21B417BB400FC1C2B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6CEFB11B417BB400FC1C2B /* GameScene.swift */; };
@@ -15,6 +16,14 @@
 		3F6CEFB91B417BB400FC1C2B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F6CEFB81B417BB400FC1C2B /* Images.xcassets */; };
 		3F6CEFBC1B417BB400FC1C2B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6CEFBA1B417BB400FC1C2B /* LaunchScreen.xib */; };
 		3F6CEFC81B417BB400FC1C2B /* FLAPPY_FIGHTERSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6CEFC71B417BB400FC1C2B /* FLAPPY_FIGHTERSTests.swift */; };
+		3F6CEFD41B41865B00FC1C2B /* ground_piece.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F6CEFD11B41865B00FC1C2B /* ground_piece.png */; };
+		3F6CEFDF1B419BA800FC1C2B /* HillsNew.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F6CEFDD1B419BA800FC1C2B /* HillsNew.png */; };
+		3F6CEFE01B419BA800FC1C2B /* SkyNew.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F6CEFDE1B419BA800FC1C2B /* SkyNew.png */; };
+		3FBE1BCF1B447D6400DCCA5E /* bottom-01 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE1BCD1B447D6400DCCA5E /* bottom-01 copy.png */; };
+		3FBE1BD01B447D6400DCCA5E /* top-01 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE1BCE1B447D6400DCCA5E /* top-01 copy.png */; };
+		3FBE1BD81B448FAC00DCCA5E /* evilFlappy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE1BD71B448FAC00DCCA5E /* evilFlappy.png */; };
+		772B64671B4605D800DAD7A9 /* flappy.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 772B64661B4605D800DAD7A9 /* flappy.atlas */; };
+		772B64691B46398100DAD7A9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B64681B46398100DAD7A9 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3F6CEFA81B417BB400FC1C2B /* FLAPPY_FIGHTERS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FLAPPY_FIGHTERS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F1B3FFF1B45BC48004AEB32 /* projectile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = projectile.png; sourceTree = "<group>"; };
+		3F6CEFA81B417BB400FC1C2B /*  Flappy Fighters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = " Flappy Fighters.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6CEFAC1B417BB400FC1C2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F6CEFAD1B417BB400FC1C2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F6CEFAF1B417BB400FC1C2B /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -40,6 +50,14 @@
 		3F6CEFC11B417BB400FC1C2B /* FLAPPY_FIGHTERSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FLAPPY_FIGHTERSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6CEFC61B417BB400FC1C2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F6CEFC71B417BB400FC1C2B /* FLAPPY_FIGHTERSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLAPPY_FIGHTERSTests.swift; sourceTree = "<group>"; };
+		3F6CEFD11B41865B00FC1C2B /* ground_piece.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ground_piece.png; sourceTree = "<group>"; };
+		3F6CEFDD1B419BA800FC1C2B /* HillsNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HillsNew.png; sourceTree = "<group>"; };
+		3F6CEFDE1B419BA800FC1C2B /* SkyNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SkyNew.png; sourceTree = "<group>"; };
+		3FBE1BCD1B447D6400DCCA5E /* bottom-01 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom-01 copy.png"; sourceTree = "<group>"; };
+		3FBE1BCE1B447D6400DCCA5E /* top-01 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-01 copy.png"; sourceTree = "<group>"; };
+		3FBE1BD71B448FAC00DCCA5E /* evilFlappy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = evilFlappy.png; sourceTree = "<group>"; };
+		772B64661B4605D800DAD7A9 /* flappy.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = flappy.atlas; sourceTree = "<group>"; };
+		772B64681B46398100DAD7A9 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +81,14 @@
 		3F6CEF9F1B417BB400FC1C2B = {
 			isa = PBXGroup;
 			children = (
+				772B64661B4605D800DAD7A9 /* flappy.atlas */,
+				3F1B3FFF1B45BC48004AEB32 /* projectile.png */,
+				3FBE1BD71B448FAC00DCCA5E /* evilFlappy.png */,
+				3FBE1BCD1B447D6400DCCA5E /* bottom-01 copy.png */,
+				3FBE1BCE1B447D6400DCCA5E /* top-01 copy.png */,
+				3F6CEFDD1B419BA800FC1C2B /* HillsNew.png */,
+				3F6CEFD11B41865B00FC1C2B /* ground_piece.png */,
+				3F6CEFDE1B419BA800FC1C2B /* SkyNew.png */,
 				3F6CEFAA1B417BB400FC1C2B /* FLAPPY_FIGHTERS */,
 				3F6CEFC41B417BB400FC1C2B /* FLAPPY_FIGHTERSTests */,
 				3F6CEFA91B417BB400FC1C2B /* Products */,
@@ -72,7 +98,7 @@
 		3F6CEFA91B417BB400FC1C2B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3F6CEFA81B417BB400FC1C2B /* FLAPPY_FIGHTERS.app */,
+				3F6CEFA81B417BB400FC1C2B /*  Flappy Fighters.app */,
 				3F6CEFC11B417BB400FC1C2B /* FLAPPY_FIGHTERSTests.xctest */,
 			);
 			name = Products;
@@ -86,6 +112,7 @@
 				3F6CEFB11B417BB400FC1C2B /* GameScene.swift */,
 				3F6CEFB31B417BB400FC1C2B /* GameViewController.swift */,
 				3F6CEFB51B417BB400FC1C2B /* Main.storyboard */,
+				772B64681B46398100DAD7A9 /* MenuViewController.swift */,
 				3F6CEFB81B417BB400FC1C2B /* Images.xcassets */,
 				3F6CEFBA1B417BB400FC1C2B /* LaunchScreen.xib */,
 				3F6CEFAB1B417BB400FC1C2B /* Supporting Files */,
@@ -135,7 +162,7 @@
 			);
 			name = FLAPPY_FIGHTERS;
 			productName = FLAPPY_FIGHTERS;
-			productReference = 3F6CEFA81B417BB400FC1C2B /* FLAPPY_FIGHTERS.app */;
+			productReference = 3F6CEFA81B417BB400FC1C2B /*  Flappy Fighters.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3F6CEFC01B417BB400FC1C2B /* FLAPPY_FIGHTERSTests */ = {
@@ -198,9 +225,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FBE1BD81B448FAC00DCCA5E /* evilFlappy.png in Resources */,
 				3F6CEFBC1B417BB400FC1C2B /* LaunchScreen.xib in Resources */,
+				3F6CEFDF1B419BA800FC1C2B /* HillsNew.png in Resources */,
+				772B64671B4605D800DAD7A9 /* flappy.atlas in Resources */,
+				3FBE1BD01B447D6400DCCA5E /* top-01 copy.png in Resources */,
+				3F6CEFE01B419BA800FC1C2B /* SkyNew.png in Resources */,
+				3F6CEFD41B41865B00FC1C2B /* ground_piece.png in Resources */,
 				3F6CEFB91B417BB400FC1C2B /* Images.xcassets in Resources */,
 				3F6CEFB01B417BB400FC1C2B /* GameScene.sks in Resources */,
+				3FBE1BCF1B447D6400DCCA5E /* bottom-01 copy.png in Resources */,
+				3F1B40001B45BC48004AEB32 /* projectile.png in Resources */,
 				3F6CEFB71B417BB400FC1C2B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +257,7 @@
 				3F6CEFB21B417BB400FC1C2B /* GameScene.swift in Sources */,
 				3F6CEFB41B417BB400FC1C2B /* GameViewController.swift in Sources */,
 				3F6CEFAE1B417BB400FC1C2B /* AppDelegate.swift in Sources */,
+				772B64691B46398100DAD7A9 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +386,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FLAPPY_FIGHTERS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = " Flappy Fighters";
 			};
 			name = Debug;
 		};
@@ -360,7 +396,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FLAPPY_FIGHTERS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = " Flappy Fighters";
 			};
 			name = Release;
 		};
@@ -379,7 +415,7 @@
 				INFOPLIST_FILE = FLAPPY_FIGHTERSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FLAPPY_FIGHTERS.app/FLAPPY_FIGHTERS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ Flappy Fighters.app/ Flappy Fighters";
 			};
 			name = Debug;
 		};
@@ -394,7 +430,7 @@
 				INFOPLIST_FILE = FLAPPY_FIGHTERSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FLAPPY_FIGHTERS.app/FLAPPY_FIGHTERS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ Flappy Fighters.app/ Flappy Fighters";
 			};
 			name = Release;
 		};
@@ -417,6 +453,7 @@
 				3F6CEFCD1B417BB400FC1C2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F6CEFCE1B417BB400FC1C2B /* Build configuration list for PBXNativeTarget "FLAPPY_FIGHTERSTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +462,7 @@
 				3F6CEFD01B417BB400FC1C2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
