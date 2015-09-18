@@ -10,12 +10,12 @@ RULES:
 
 1. Avoid your flappy falling of the screen. (By being pushed back by the lightning bolts.)
 2. You may not  hit the ground, but you may hit the lightning bolts.
-3. Kill as many evil flappies as you can, and see what tricks you can make your flappy do while doing so.
+3. Kill as many evil flappies as you can, and see what tricks you can make your flappy do while doing sso.
 4. You increase the speed of the good flappy by using the scroll bar on the right.
 
 
 
-ONLY CALL THE FUNCTION WITH TEH COMPUTER FLAPPY WHEN A NEW LIGHTNING BOLT IS MADE
+ONLY CALL THE FUNCTION WITH THE COMPUTER FLAPPY WHEN A NEW LIGHTNING BOLT IS MADE
 */
 
 import SpriteKit
@@ -67,8 +67,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //obstacles variables
     var obstacles = [SKNode]()
-    let heightBetweenObstacles = 475
-    let timeBetweenObstacles = 1.5
+    let heightBetweenObstacles = 485
+    let timeBetweenObstacles = 1.50
     let bottomObstacleMaxYPos = 185
     let bottomObstacleMinYPos = -85
     let ObstacleXStartPos: CGFloat = 1085
@@ -88,10 +88,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var evilFlappy: SKSpriteNode!
     var projectile: SKSpriteNode!
-    
+    var nothing = false
     
     
     var projectileOnScreen = true
+    
+    var scoreUp: Bool = false
+    var scoreStaySame: Bool!
     // when right side of screen is pressed it becomes true
     //when it is true it is added to the screen, and gets an impulse
     //then if it's position is within a range near the y and x values of the enemy bird, the enemy will disapear, the good bird will reset to the start of the screen, and score will go up one
@@ -102,24 +105,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //there are only two screens: the playing screen and the title/score/gameover/rules screen
     //also make a small display on the play screen which shows current score
     
-    override func didMoveToView(view: SKView) {
+    override func didMoveToView(view: SKView) { //you can think of this also as button pressed
         
-     
+        
         physicsWorld.contactDelegate = self
         myScene.gameOverLabel.hidden = true
         
         
         projectile = SKSpriteNode(imageNamed: "projectile")
         
-        
+        scoreStaySame = false
         
         setupScenery()
         initSetup()
         startGame()
         setupGoodFlappies()
-        
         self.physicsWorld.gravity = CGVectorMake(0, -2)
-        
         
         
         
@@ -191,10 +192,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         flappy = SKSpriteNode(texture: flappyFrames[0])
         flappy.physicsBody = SKPhysicsBody(circleOfRadius: flappy.size.height/2)
         flappy.physicsBody?.dynamic = true
-        flappy.zPosition = 4
+        flappy.zPosition = 6
         flappy.physicsBody?.affectedByGravity = true
         self.addChild(flappy)
-        flappy.position = CGPointMake(CGRectGetMidX(self.frame)-350, CGRectGetMidY(self.frame))
+        flappy.position = CGPointMake(CGRectGetMidX(self.frame)-350, CGRectGetMidY(self.frame)+100)
         flappy.runAction(SKAction.repeatActionForever(SKAction.animateWithTextures(flappyFrames, timePerFrame: 0.2, resize: false, restore: true)))
         
         flappy.physicsBody!.categoryBitMask = category_flappy
@@ -259,7 +260,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if touch.locationInNode(self).x <= size.width / 2 {
                 
                 flappy.physicsBody?.velocity = CGVectorMake(0, 0)
-                let a = SKAction.moveByX(0, y: 90, duration: 0.13)
+                let a = SKAction.moveByX(0, y: 80, duration: 0.13)
                 flappy.runAction(a)
                 let b = SKAction.rotateToAngle(0.3, duration: Double(0.08))
                 flappy.runAction(b)
@@ -310,11 +311,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         setupEvilFlappy()
         evilFlappy.hidden = false
-        
+        evilFlappy.zPosition = 6
         obstacleTimer = NSTimer(timeInterval: timeBetweenObstacles, target: self, selector: "createBottomObstacleSet:", userInfo: nil, repeats: true)
         NSRunLoop.mainRunLoop().addTimer(obstacleTimer, forMode: NSDefaultRunLoopMode)
         obstacleTimer.fire()
-
+        
         
     }
     
@@ -337,27 +338,33 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if flappy.position.x < 0 || flappy.position.x > self.frame.size.width{
             gameOver()
         }
+        if flappy.position.y > self.frame.size.height + 50{
+            gameOver()
+        }
     }
     
     func gameOver() {
         myScene.gameOverLabel.hidden = false
         scene?.removeAllChildren()
+        obstacleTimer.invalidate()
         NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: "unwindToMenu:", userInfo: nil, repeats: false)
     }
     
     func unwindToMenu(timer : NSTimer){
- 
+        
         myScene.unwind()
+        //the name of the label = scoreLabel
     }
     
     
     func setupEvilFlappy(){
-     
         let tex = SKTexture(imageNamed: "evilFlappy.png")
         
         evilFlappy = SKSpriteNode(imageNamed: "evilFlappy.png")
         
-        evilFlappy.physicsBody = SKPhysicsBody(texture: tex, size: tex.size())//makes transparent pixels not be recognized
+        evilFlappy.physicsBody = SKPhysicsBody(texture: tex, size: tex.size())
+        
+       // evilFlappy.physicsBody = SKPhysicsBody(texture: tex, size: tex.size())//makes transparent pixels not be recognized
         
         evilFlappy.physicsBody!.dynamic = false
         evilFlappy.physicsBody!.categoryBitMask = category_evilFlappy
@@ -367,13 +374,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         evilFlappy.position = CGPointMake(940, 320)
         self.addChild(evilFlappy)
-        
+        evilFlappy.hidden = false
         
     }
     func moveEvilFlappy(){
         
         
-        var moveAction = SKAction.moveToY(CGFloat(yPosOfEvilFlappy), duration: (0.8))
+        var moveAction = SKAction.moveToY(CGFloat(yPosOfEvilFlappy), duration: (0.6))
         
         evilFlappy.runAction(moveAction)
         
@@ -386,6 +393,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         projectile.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "projectile.png"), size: projectile.size)
         projectile.position = CGPoint(x: flappy.position.x + 20, y: flappy.position.y)
         self.addChild(projectile)
+        projectile.zPosition = 6
         projectile.physicsBody?.applyImpulse(CGVector(dx: 60, dy: 0))
         projectile.physicsBody?.allowsRotation = false
         projectile.physicsBody?.affectedByGravity = false
@@ -400,6 +408,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setupProjectileWhenFalse(){
         projectile.physicsBody = SKPhysicsBody(texture: SKTexture(imageNamed: "projectile.png"), size: projectile.size)
         projectile.position = CGPoint(x: flappy.position.x + 20, y: flappy.position.y)
+        projectile.zPosition = 6
         projectile.physicsBody?.applyImpulse(CGVector(dx: 60, dy: 0))
         projectile.physicsBody?.allowsRotation = false
         projectile.physicsBody?.affectedByGravity = false
@@ -412,12 +421,38 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
+    func scoreTimer(timer: NSTimer){
+        scoreStaySame = false
+    }
+    
+    func scoreUpOne() {
+        if scoreUp == true && scoreStaySame == false{
+            scoreLabel++
+            myScene.scoreLabel.text = "\(scoreLabel)"
+            scoreUp = false
+            scoreStaySame = true
+            NSTimer.scheduledTimerWithTimeInterval(1.7, target: self, selector: "scoreTimer:", userInfo: nil, repeats: false)
+            
+        }
+        else if scoreUp == true && scoreStaySame == true{
+            nothing = false
+        }
+        else if scoreUp == false && scoreStaySame == true{
+            nothing = false
+        }
+        
+        else {
+            abort()
+        }
+    }
+    
     
     func evilFlappyRespawnTimer(timer : NSTimer){
         evilFlappy.position = CGPointMake(940, 320)
         evilFlappy.hidden = false
     }
     //respawn
+
     
     func didBeginContact(contact: SKPhysicsContact) {
         if (contact.bodyA.node?.name == "projectile" && contact.bodyB.node?.name == "bottomBolt"){
@@ -425,33 +460,53 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }else if (contact.bodyA.node?.name == "projectile" && contact.bodyB.node?.name == "topBolt"){
             projectile.hidden = true
         }else if (contact.bodyA.node?.name == "topBolt" && contact.bodyB.node?.name == "projectile"){
-                projectile.hidden = true
+            projectile.hidden = true
         }else if (contact.bodyA.node?.name == "bottomBolt" && contact.bodyB.node?.name == "projectile"){
             projectile.hidden = true
             
             
         }
         
+        if (contact.bodyA.node?.name == "flappy" && contact.bodyB.node?.name == "bottomBolt"){
+            gameOver()
+        }else if (contact.bodyA.node?.name == "flappy" && contact.bodyB.node?.name == "topBolt"){
+            gameOver()
+        }else if (contact.bodyA.node?.name == "topBolt" && contact.bodyB.node?.name == "flappy"){
+            gameOver()
+        }else if (contact.bodyA.node?.name == "bottomBolt" && contact.bodyB.node?.name == "flappy"){
+            gameOver()
+            
+            
+        }
+        
         if (contact.bodyA.node?.name == "projectile" && contact.bodyB.node?.name == "evilFlappy") {
-            scoreLabel++
-            myScene.scoreLabel.text = "\(scoreLabel)"
             projectile.hidden = true
             evilFlappy.hidden = true
+
+            
+            scoreUp = true
+            scoreUpOne()
             NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "evilFlappyRespawnTimer:", userInfo: nil, repeats: false)
+            
         }
         else if (contact.bodyA.node?.name == "evilFlappy" && contact.bodyB.node?.name == "projectile"){
-            scoreLabel++
-            myScene.scoreLabel.text = "\(scoreLabel)"
-            projectile.hidden = true
+
             evilFlappy.hidden = true
+            projectile.hidden = true
+            scoreUp = true
+            scoreUpOne()
             NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "evilFlappyRespawnTimer:", userInfo: nil, repeats: false)
+            
+            
         }
         if (contact.bodyA.node?.name == "flappy" && contact.bodyB.node?.name == "sprite") {
-         gameOver()
+            gameOver()
         }
         else if  (contact.bodyA.node?.name == "sprite" && contact.bodyB.node?.name == "flappy") {
-        gameOver()
+            gameOver()
         }
+        
+        
     }
     
     //calculates delta time

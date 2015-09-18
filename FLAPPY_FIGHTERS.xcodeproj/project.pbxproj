@@ -21,9 +21,11 @@
 		3F6CEFE01B419BA800FC1C2B /* SkyNew.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F6CEFDE1B419BA800FC1C2B /* SkyNew.png */; };
 		3FBE1BCF1B447D6400DCCA5E /* bottom-01 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE1BCD1B447D6400DCCA5E /* bottom-01 copy.png */; };
 		3FBE1BD01B447D6400DCCA5E /* top-01 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE1BCE1B447D6400DCCA5E /* top-01 copy.png */; };
-		3FBE1BD81B448FAC00DCCA5E /* evilFlappy.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FBE1BD71B448FAC00DCCA5E /* evilFlappy.png */; };
-		772B64671B4605D800DAD7A9 /* flappy.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 772B64661B4605D800DAD7A9 /* flappy.atlas */; };
+		771881691B643828002AF7AF /* flappy.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 771881681B643828002AF7AF /* flappy.atlas */; };
+		7718816B1B66C9AC002AF7AF /* Flappy fighters start up logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7718816A1B66C9AC002AF7AF /* Flappy fighters start up logo.png */; };
 		772B64691B46398100DAD7A9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772B64681B46398100DAD7A9 /* MenuViewController.swift */; };
+		7787CE251B8A8F1700EBB1D3 /* evilFlappy.png in Resources */ = {isa = PBXBuildFile; fileRef = 7787CE241B8A8F1700EBB1D3 /* evilFlappy.png */; };
+		77CCD3A21B66E2C800D7DAE3 /* 04B_19__.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 7718816C1B66E017002AF7AF /* 04B_19__.TTF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,9 +57,11 @@
 		3F6CEFDE1B419BA800FC1C2B /* SkyNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SkyNew.png; sourceTree = "<group>"; };
 		3FBE1BCD1B447D6400DCCA5E /* bottom-01 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom-01 copy.png"; sourceTree = "<group>"; };
 		3FBE1BCE1B447D6400DCCA5E /* top-01 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top-01 copy.png"; sourceTree = "<group>"; };
-		3FBE1BD71B448FAC00DCCA5E /* evilFlappy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = evilFlappy.png; sourceTree = "<group>"; };
-		772B64661B4605D800DAD7A9 /* flappy.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = flappy.atlas; sourceTree = "<group>"; };
+		771881681B643828002AF7AF /* flappy.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = flappy.atlas; sourceTree = "<group>"; };
+		7718816A1B66C9AC002AF7AF /* Flappy fighters start up logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Flappy fighters start up logo.png"; sourceTree = "<group>"; };
+		7718816C1B66E017002AF7AF /* 04B_19__.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = 04B_19__.TTF; path = FLAPPY_FIGHTERS/04B_19__.TTF; sourceTree = SOURCE_ROOT; };
 		772B64681B46398100DAD7A9 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		7787CE241B8A8F1700EBB1D3 /* evilFlappy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = evilFlappy.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +85,11 @@
 		3F6CEF9F1B417BB400FC1C2B = {
 			isa = PBXGroup;
 			children = (
-				772B64661B4605D800DAD7A9 /* flappy.atlas */,
+				771881681B643828002AF7AF /* flappy.atlas */,
+				7718816A1B66C9AC002AF7AF /* Flappy fighters start up logo.png */,
 				3F1B3FFF1B45BC48004AEB32 /* projectile.png */,
-				3FBE1BD71B448FAC00DCCA5E /* evilFlappy.png */,
 				3FBE1BCD1B447D6400DCCA5E /* bottom-01 copy.png */,
+				7787CE241B8A8F1700EBB1D3 /* evilFlappy.png */,
 				3FBE1BCE1B447D6400DCCA5E /* top-01 copy.png */,
 				3F6CEFDD1B419BA800FC1C2B /* HillsNew.png */,
 				3F6CEFD11B41865B00FC1C2B /* ground_piece.png */,
@@ -112,6 +117,7 @@
 				3F6CEFB11B417BB400FC1C2B /* GameScene.swift */,
 				3F6CEFB31B417BB400FC1C2B /* GameViewController.swift */,
 				3F6CEFB51B417BB400FC1C2B /* Main.storyboard */,
+				7718816C1B66E017002AF7AF /* 04B_19__.TTF */,
 				772B64681B46398100DAD7A9 /* MenuViewController.swift */,
 				3F6CEFB81B417BB400FC1C2B /* Images.xcassets */,
 				3F6CEFBA1B417BB400FC1C2B /* LaunchScreen.xib */,
@@ -194,6 +200,7 @@
 				TargetAttributes = {
 					3F6CEFA71B417BB400FC1C2B = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = RS4MZ6ND5J;
 					};
 					3F6CEFC01B417BB400FC1C2B = {
 						CreatedOnToolsVersion = 6.3;
@@ -225,16 +232,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FBE1BD81B448FAC00DCCA5E /* evilFlappy.png in Resources */,
+				7718816B1B66C9AC002AF7AF /* Flappy fighters start up logo.png in Resources */,
 				3F6CEFBC1B417BB400FC1C2B /* LaunchScreen.xib in Resources */,
 				3F6CEFDF1B419BA800FC1C2B /* HillsNew.png in Resources */,
-				772B64671B4605D800DAD7A9 /* flappy.atlas in Resources */,
 				3FBE1BD01B447D6400DCCA5E /* top-01 copy.png in Resources */,
+				77CCD3A21B66E2C800D7DAE3 /* 04B_19__.TTF in Resources */,
+				7787CE251B8A8F1700EBB1D3 /* evilFlappy.png in Resources */,
 				3F6CEFE01B419BA800FC1C2B /* SkyNew.png in Resources */,
 				3F6CEFD41B41865B00FC1C2B /* ground_piece.png in Resources */,
 				3F6CEFB91B417BB400FC1C2B /* Images.xcassets in Resources */,
 				3F6CEFB01B417BB400FC1C2B /* GameScene.sks in Resources */,
 				3FBE1BCF1B447D6400DCCA5E /* bottom-01 copy.png in Resources */,
+				771881691B643828002AF7AF /* flappy.atlas in Resources */,
 				3F1B40001B45BC48004AEB32 /* projectile.png in Resources */,
 				3F6CEFB71B417BB400FC1C2B /* Main.storyboard in Resources */,
 			);
@@ -384,6 +393,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FLAPPY_FIGHTERS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = " Flappy Fighters";
@@ -394,6 +404,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FLAPPY_FIGHTERS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = " Flappy Fighters";

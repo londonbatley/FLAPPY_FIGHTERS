@@ -3,7 +3,7 @@
 //  FLAPPY_FIGHTERS
 //
 //  Created by Kamran Kara-Pabani on 7/2/15.
-//  Copyright (c) 2015 iD Student. All rights reserved.
+//  Copyright (c) 2015 Kamran Kara-Pabani. All rights reserved.
 //
 
 import UIKit
@@ -18,7 +18,6 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var howToPlay: UILabel!
     
     
-    @IBOutlet weak var actualRules: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

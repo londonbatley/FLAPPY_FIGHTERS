@@ -45,7 +45,7 @@ class GameViewController: UIViewController {
             
             scene.myScene = self
             let skView = self.view as! SKView
-            skView.showsFPS = true
+            skView.showsFPS = false
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
             
@@ -82,4 +82,11 @@ class GameViewController: UIViewController {
     func unwind(){
         performSegueWithIdentifier("unwindToMenu", sender: self)
     }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        (segue.destinationViewController as! MenuViewController).scoreDisplayMenu.text = scoreLabel.text
+    }
+    
 }
