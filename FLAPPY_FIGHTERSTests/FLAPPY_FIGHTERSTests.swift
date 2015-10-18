@@ -2,8 +2,6 @@
 //  FLAPPY_FIGHTERSTests.swift
 //  FLAPPY_FIGHTERSTests
 //
-//  Created by iD Student on 6/29/15.
-//  Copyright (c) 2015 iD Student. All rights reserved.
 //
 
 import UIKit
