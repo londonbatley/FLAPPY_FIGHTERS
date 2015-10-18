@@ -2,16 +2,9 @@
 //  GameScene.swift
 //  FLAPPY_FIGHTERS
 //
-//  Created by iD Student on 6/29/15.
-//  Copyright (c) 2015 iD Student. All rights reserved.
+//  Kamran Kara-Pabani
 //
 /*
-RULES:
-
-1. Avoid your flappy falling of the screen. (By being pushed back by the lightning bolts.)
-2. You may not  hit the ground, but you may hit the lightning bolts.
-3. Kill as many evil flappies as you can, and see what tricks you can make your flappy do while doing sso.
-4. You increase the speed of the good flappy by using the scroll bar on the right.
 
 
 
